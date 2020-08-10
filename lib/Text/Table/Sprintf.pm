@@ -29,11 +29,11 @@ sub table {
     # determine the sprintf format for a single row
     my $rowfmt = join(
         "",
-        (map { ($_ ? "" : "|"), " %-$widths[$_]s |" } 0..$#widths),
+        (map { ($_ ? "" : "|") . " %-$widths[$_]s |" } 0..$#widths),
         "\n");
     my $line = join(
         "",
-        (map { (($_ ? "" : "+"), ("-" x ($widths[$_]+2)), "+") } 0..$#widths),
+        (map { ($_ ? "" : "+") . ("-" x ($widths[$_]+2)) . "+" } 0..$#widths),
         "\n");
 
     # determine the sprintf format for the whole table
@@ -96,8 +96,13 @@ The example shown in the SYNOPSIS generates the following table:
  +-------+----------+----------+
 
 This module models its interface on L<Text::Table::Tiny> 0.03, employs the same
-technique of using C<sprintf()> but takes the technique further by using a
-single large format and C<sprintf> the whole table.
+technique of using C<sprintf()>, but takes the technique further by using a
+single large format and C<sprintf> the whole table. This results in even more
+performance gain (see benchmark result or benchmark using
+L<Acme::CPANModules::TextTable>).
+
+Caveats: make sure each row contains the same number of elements. Otherwise, the
+table will not be correctly formatted (cells might move to another row/column).
 
 
 =head1 FUNCTIONS
