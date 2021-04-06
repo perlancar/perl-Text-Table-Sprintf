@@ -1,3 +1,11 @@
+0.003   2021-04-02  Released-By: PERLANCAR; Urgency: low
+
+	- No functional changes.
+
+	- [build] Forgot to include Pod::Weaver plugin [-Module::Features] to
+          render declared features to POD.
+
+
 0.002   2021-04-02  Released-By: PERLANCAR; Urgency: low
 
 	- No functional changes.
