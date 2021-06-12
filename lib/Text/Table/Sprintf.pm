@@ -131,6 +131,10 @@ row, and separated from the rest of the table with a ruled line.
 
 =back
 
+=head2 generate_table
+
+Alias for L</table>, for compatibility with L<Text::Table::Tiny>.
+
 
 =head1 SEE ALSO
 
