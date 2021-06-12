@@ -6,7 +6,7 @@ package Text::Table::Sprintf;
 # VERSION
 
 #IFUNBUILT
-use strict;
+use strict 'subs', 'vars';
 use warnings;
 #END IFUNBUILT
 
@@ -59,6 +59,8 @@ sub table {
     # generate table
     sprintf $tblfmt, map { @$_ } @$rows;
 }
+
+*generate_table = \&table;
 
 1;
 #ABSTRACT: Generate simple text tables from 2D arrays using sprintf()
