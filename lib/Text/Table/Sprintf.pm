@@ -140,4 +140,6 @@ Alias for L</table>, for compatibility with L<Text::Table::Tiny>.
 
 L<Text::Table::Tiny>
 
-Other text table modules listed in L<Acme::CPANModules::TextTable>.
+Other text table modules listed in L<Acme::CPANModules::TextTable>. The selling
+point of Text::Table::Sprintf is performance and light footprint (just about a
+page of code that does not use I<any> module, core or otherwise).
