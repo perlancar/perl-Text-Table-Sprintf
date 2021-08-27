@@ -1,5 +1,5 @@
 # we strive for minimality
-## no strict: TestingAndDebugging::RequireUseStrict
+## no critic: TestingAndDebugging::RequireUseStrict
 package Text::Table::Sprintf;
 
 #IFUNBUILT
