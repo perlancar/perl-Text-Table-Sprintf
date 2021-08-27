@@ -1,14 +1,16 @@
+# we strive for minimality
+## no strict: TestingAndDebugging::RequireUseStrict
 package Text::Table::Sprintf;
-
-# AUTHORITY
-# DATE
-# DIST
-# VERSION
 
 #IFUNBUILT
 use strict 'subs', 'vars';
 use warnings;
 #END IFUNBUILT
+
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
 
 our %FEATURES = (
     set_v => {
