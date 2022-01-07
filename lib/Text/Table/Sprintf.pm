@@ -87,14 +87,14 @@ sub table {
             $line,
             $rowfmt,
             $line,
-            (map { $rowfmt } 1..@$rows-1),
+            (map { $rowfmt . ($params{separate_rows} && $_ < $#{$rows} ? $line : '') } 1..@$rows-1),
             $line,
         );
     } else {
         $tblfmt = join(
             "",
             $line,
-            (map { $rowfmt } 1..@$rows),
+            (map { $rowfmt . ($params{separate_rows} && $_ < $#{$rows} ? $line : '') } 1..@$rows),
             $line,
         );
     }
@@ -171,6 +171,10 @@ each row is an array reference.
 
 If given a true value, the first row in the data will be interpreted as a header
 row, and separated from the rest of the table with a ruled line.
+
+=item * separate_row (bool)
+
+If set to true, will draw separator line between data rows.
 
 =back
 
